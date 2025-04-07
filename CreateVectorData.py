@@ -19,11 +19,12 @@ collection.add(
 )
 
 query_results = collection.query(
-    query_texts=["Disadvantages of AI"], # Chroma will embed this for you
+    query_texts=["What are Anti-virus"], # Chroma will embed this for you
     n_results=3 # how many results to return
 )
 
 results=query_results["ids"][0]
+# pprint.pprint(query_results)
 
 
 
