@@ -31,11 +31,11 @@ def extract_text_from_pptx(pptx_path):
 
 
 
-extract_text_from_pptx("data/inputPPT's/Advantages-and-Disadvantages-of-AI.pptx")
-extract_text_from_pptx("data/inputPPT's/AI.pptx.pptx")
-extract_text_from_pptx("data/inputPPT's/Cyber-Security-Awarness-Slide-September-2022 (1).pptx")
-extract_text_from_pptx("data/inputPPT's/cybersecurity.pptx")
-extract_text_from_pptx("data/inputPPT's/IT-Security-20210426203847.pptx")
+extract_text_from_pptx("data/inputPPTs/Advantages-and-Disadvantages-of-AI.pptx")
+extract_text_from_pptx("data/inputPPTs/AI.pptx.pptx")
+extract_text_from_pptx("data/inputPPTs/Cyber-Security-Awarness-Slide-September-2022 (1).pptx")
+extract_text_from_pptx("data/inputPPTs/cybersecurity.pptx")
+extract_text_from_pptx("data/inputPPTs/IT-Security-20210426203847.pptx")
 
 
 
