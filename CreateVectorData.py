@@ -2,25 +2,29 @@ import chromadb
 from main import slides
 import pprint
 
-
 chroma_client = chromadb.Client()
+
+
+ids_list=[]
+for key,value in slides.items():
+    ids_list.append(str(key))
 
 
 collection = chroma_client.create_collection(name="my_collection")
 
 
 collection.add(
-    documents=[x for x in slides],
-    ids=[f"id{x}" for x in range(len(slides))]
-
+    documents=[value.get_text() for key,value in slides.items()],
+    ids=ids_list
 )
 
-results = collection.query(
+query_results = collection.query(
     query_texts=["Disadvantages of AI"], # Chroma will embed this for you
     n_results=3 # how many results to return
 )
 
-print(results)
+results=query_results["ids"][0]
+
 
 
 
