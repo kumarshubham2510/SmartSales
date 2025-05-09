@@ -22,6 +22,8 @@ with slides.Presentation("data/inputPPTs/AI.pptx.pptx") as srcPres:
         # Clone the desired slide from the source presentation to the end of the collection of slides in destination presentation
         slds = destPres.slides
         slds.add_clone(srcPres.slides[4])
+        slds.add_clone(srcPres.slides[5])
+        slds.add_clone(srcPres.slides[6])
 
         # Write the destination presentation to disk
         destPres.save("Aspose2_out.pptx", slides.export.SaveFormat.PPTX)
