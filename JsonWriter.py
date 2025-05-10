@@ -1,6 +1,6 @@
 import os
 import json
-from main import slides
+from DataExtraction import slides
 
 def read_text_files_to_json(directory_path, json_file_path):
     # List to hold the contents of all the text files

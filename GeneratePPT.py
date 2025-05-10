@@ -1,25 +1,22 @@
+from spire.presentation import *
+
 from CreateVectorData import results
-from main import slides
-from pptx import Presentation
-from pptx.util import Inches, Pt
-from pptx.enum.shapes import MSO_SHAPE_TYPE
-from pptx.enum.text import MSO_ANCHOR, MSO_AUTO_SIZE
-from io import BytesIO
+from DataExtraction import slides
+
 from DeepCloneSlide import add_slides_from_list
 
+def generatePPT(OUTPUT_PATH):
 
-OUTPUT_PATH= "data/outputPPTs/new_presentation.pptx"
+    prs = Presentation()
 
-prs = Presentation()
+    slides_to_copy=[slides[x].slide for x in results]
 
-slides_to_copy=[slides[x].slide for x in results]
+    prs =add_slides_from_list(slides_to_copy)
 
-prs =add_slides_from_list(slides_to_copy)
+    prs.SaveToFile(OUTPUT_PATH, FileFormat.Pptx2016)
+    prs.Dispose()
 
-
-
-prs.save(OUTPUT_PATH)
-print("New presentation 'new_presentation.pptx' created with added slides in the data outputs ppt")
+    print("New presentation 'new_presentation.pptx' created with added slides in the data outputs ppt")
 
 
 
